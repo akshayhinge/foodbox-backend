@@ -33,7 +33,7 @@ public class Ordercontroller {
 		}
 		return new ResponseEntity<String>("No order placed with this id...",HttpStatus.NOT_FOUND);
 	}
-	@GetMapping("/userid/{uid}")
+	@GetMapping("userid/{uid}")
 	public ResponseEntity<?> getallOrdersofuser(@PathVariable("uid")Long uid){
 		List<Order> getallOrders = services.getallOrdersbyuid(uid);
 		if (getallOrders.isEmpty()!=true) {
